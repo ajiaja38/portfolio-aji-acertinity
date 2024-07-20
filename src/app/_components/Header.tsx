@@ -35,7 +35,7 @@ const Header: React.FC = (): JSX.Element => {
             transition={{ delay: 0.2, duration: 0.8, ease: "circOut" }}
             className="my-2 text-6xl lg:text-9xl font-extrabold font-Anton tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
           >
-            M. <span className="text-yellow-300">AJI</span> PERDANA
+            M. <span className="text-lime-400">AJI</span> PERDANA
           </motion.h1>
           <motion.div
             initial={{ y: -20, opacity: 0 }}
