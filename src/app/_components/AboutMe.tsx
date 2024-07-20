@@ -6,6 +6,8 @@ import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { LinkPreview } from "@/components/link-preview";
+import { Button } from "@/components/moving-border";
+import { FaGithubSquare, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 
 const AboutMe: React.FC = (): JSX.Element => {
   const codeToString: string = `
@@ -62,7 +64,7 @@ const AboutMe: React.FC = (): JSX.Element => {
           animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -100 }}
           transition={{ duration: 1, ease: "backOut", delay: 0.2 }}
           ref={ref}
-          className="w-[90%] mt-7"
+          className="w-[90%] mt-7 hidden lg:block"
         >
           <CardContainer className="inter-var">
             <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-gray-950 border border-white/[0.2] w-fit h-auto rounded-xl p-6">
@@ -108,12 +110,21 @@ const AboutMe: React.FC = (): JSX.Element => {
               </div>
             </CardBody>
           </CardContainer>
-          <div className="px-16 mt-8">
-            <LinkPreview
-              url="https://github.com/ajiaja38"
-              className="font-bold"
-            >
-              Github
+          <div className="px-14 mt-5 flex justify-between">
+            <LinkPreview url="https://github.com/ajiaja38">
+              <Button className="text-lg flex gap-3 w-32">
+                <FaGithubSquare /> Github
+              </Button>
+            </LinkPreview>
+            <LinkPreview url="https://www.linkedin.com/in/m-aji-perdana-3807071bb/">
+              <Button className="text-lg flex gap-3 w-32">
+                <FaLinkedin /> LinkedIn
+              </Button>
+            </LinkPreview>
+            <LinkPreview url="https://www.instagram.com/tromolsupraa/">
+              <Button className="text-lg flex gap-3 w-32">
+                <FaInstagramSquare /> Instagram
+              </Button>
             </LinkPreview>
           </div>
         </motion.div>
