@@ -30,9 +30,9 @@ const Header: React.FC = (): JSX.Element => {
           initial={{ y: -30, scale: 0.9, opacity: 0 }}
           animate={{ y: 0, scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8, ease: "circOut" }}
-          className="text-5xl lg:text-9xl font-extrabold font-Anton my-2 tracking-wider"
+          className="text-5xl lg:text-9xl font-extrabold font-Anton my-2 tracking-wide"
         >
-          M. <span className="text-red-500">AJI</span> PERDANA
+          M. <span className="text-yellow-500">AJI</span> PERDANA
         </motion.h1>
         <motion.div
           initial={{ y: -20, opacity: 0 }}
