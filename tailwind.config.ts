@@ -1,9 +1,3 @@
-import {
-  Anton,
-  Bebas_Neue,
-  Grape_Nuts,
-  Playfair_Display,
-} from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const {
