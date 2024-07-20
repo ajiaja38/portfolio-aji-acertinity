@@ -101,7 +101,7 @@ const Header: React.FC = (): JSX.Element => {
               ease: "backOut",
             }}
             whileHover={{ scale: 1.2 }}
-            className="flex justify-center mb-10 mt-4 w-fit"
+            className="flex justify-center mt-4 w-fit"
           >
             <a href="#about_me">
               <HoverBorderGradient
