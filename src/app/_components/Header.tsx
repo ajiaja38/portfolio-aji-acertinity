@@ -103,13 +103,15 @@ const Header: React.FC = (): JSX.Element => {
             whileHover={{ scale: 1.2 }}
             className="flex justify-center mb-10 mt-4 w-fit"
           >
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              as="button"
-              className="bg-gray-950 flex items-center space-x-2"
-            >
-              <span>Contact Me</span>
-            </HoverBorderGradient>
+            <a href="#about_me">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="bg-gray-950 flex items-center space-x-2"
+              >
+                <span>About Me</span>
+              </HoverBorderGradient>
+            </a>
           </motion.div>
         </div>
         <BackgroundBeams />
