@@ -1,4 +1,9 @@
-import { Playfair_Display } from "next/font/google";
+import {
+  Anton,
+  Bebas_Neue,
+  Grape_Nuts,
+  Playfair_Display,
+} from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const {
@@ -20,6 +25,11 @@ const config: Config = {
       },
       fontFamily: {
         Playfair_Display: ["Playfair Display", "serif"],
+        Poppins: ["Poppins", "sans-serif"],
+        Bebas_Neue: ["Bebas Neue", "cursive"],
+        Anton: ["Anton", "sans-serif"],
+        Playwrite: ["Playwrite CU", "sans-serif"],
+        Grape_Nuts: ["Grape Nuts", "cursive"],
       },
       container: {
         center: true,

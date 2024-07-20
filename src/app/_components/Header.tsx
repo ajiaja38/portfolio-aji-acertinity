@@ -13,7 +13,7 @@ const Header: React.FC = (): JSX.Element => {
 
   return (
     <header className="container p-4 lg:p-0 antialiased w-full h-screen flex justify-center items-center">
-      <div className="w-full z-10 text-center flex flex-col justify-center items-center gap-y-3 font-Playfair_Display">
+      <div className="w-full z-10 text-center flex flex-col justify-center items-center gap-y-3">
         <motion.p
           initial={{ y: -100, opacity: 0, scale: 0.3 }}
           animate={{ y: 0, opacity: 1, scale: [0.1, 1] }}
@@ -22,7 +22,7 @@ const Header: React.FC = (): JSX.Element => {
             duration: 1,
             ease: "backOut",
           }}
-          className="text-lg lg:text-5xl"
+          className="text-lg lg:text-4xl mb-2 text-gray-200 font-Playwrite"
         >
           ✨ Hello i{"'"}m
         </motion.p>
@@ -30,15 +30,15 @@ const Header: React.FC = (): JSX.Element => {
           initial={{ y: -30, scale: 0.9, opacity: 0 }}
           animate={{ y: 0, scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8, ease: "circOut" }}
-          className="text-4xl lg:text-9xl font-bold"
+          className="text-5xl lg:text-9xl font-extrabold font-Anton my-2 tracking-wider"
         >
-          M. <span className="text-amber-400">AJI</span> PERDANA
+          M. <span className="text-red-500">AJI</span> PERDANA
         </motion.h1>
         <motion.div
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8, ease: "backOut" }}
-          className="text-xl lg:text-5xl font-bold my-4"
+          className="text-2xl lg:text-6xl font-bold font-Grape_Nuts"
         >
           I{"'"}m a <FlipWords {...{ words }} />
         </motion.div>
