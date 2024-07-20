@@ -51,9 +51,9 @@ const Header: React.FC = (): JSX.Element => {
             duration: 1,
             ease: "backOut",
           }}
-          className="lg:w-[60%] text-gray-400 text-sm lg:text-lg font-mono"
+          className="lg:w-[67%] text-gray-400 text-sm lg:text-lg font-mono"
         >
-          Here, we{"'"}re not just{" "}
+          Work hard and stay curious. Here, we{"'"}re not just{" "}
           <span className="text-green-500 font-bold text-lg lg:text-xl">
             coding
           </span>
