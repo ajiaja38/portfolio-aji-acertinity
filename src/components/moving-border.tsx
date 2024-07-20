@@ -82,25 +82,29 @@ export const MovingBorder = ({
   ry?: string;
   [key: string]: any;
 }) => {
-  const pathRef = useRef<any>();
+  const pathRef = useRef<SVGPathElement>(null); // Menggunakan SVGPathElement
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
-    const length = pathRef.current?.getTotalLength();
-    if (length) {
+    if (pathRef.current) {
+      const length = pathRef.current.getTotalLength();
       const pxPerMillisecond = length / duration;
       progress.set((time * pxPerMillisecond) % length);
     }
   });
 
-  const x = useTransform(
-    progress,
-    (val) => pathRef.current?.getPointAtLength(val).x
-  );
-  const y = useTransform(
-    progress,
-    (val) => pathRef.current?.getPointAtLength(val).y
-  );
+  const x = useTransform(progress, (val) => {
+    if (pathRef.current) {
+      return pathRef.current.getPointAtLength(val).x;
+    }
+    return 0;
+  });
+  const y = useTransform(progress, (val) => {
+    if (pathRef.current) {
+      return pathRef.current.getPointAtLength(val).y;
+    }
+    return 0;
+  });
 
   const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
 
@@ -114,12 +118,11 @@ export const MovingBorder = ({
         height="100%"
         {...otherProps}
       >
-        <rect
+        <path
           fill="none"
-          width="100%"
-          height="100%"
-          rx={rx}
-          ry={ry}
+          stroke="transparent"
+          strokeWidth="2"
+          d="M10 10 H 90 V 90 H 10 Z"
           ref={pathRef}
         />
       </svg>
