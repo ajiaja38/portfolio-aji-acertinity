@@ -64,68 +64,70 @@ const AboutMe: React.FC = (): JSX.Element => {
           animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -100 }}
           transition={{ duration: 1, ease: "backOut", delay: 0.2 }}
           ref={ref}
-          className="w-[90%] mt-7 hidden lg:block"
+          className="w-[90%] mt-7 hidden lg:flex justify-center"
         >
-          <CardContainer className="inter-var">
-            <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-gray-950 border border-white/[0.2] w-fit h-auto rounded-xl p-6">
-              <CardItem
-                translateZ="50"
-                className="text-xl font-bold text-white"
-              >
-                About Me
-              </CardItem>
-              <CardItem
-                as="p"
-                translateZ="60"
-                className="text-gray-300 text-sm max-w-sm mt-2 "
-              >
-                Hi, I{"'"}m M.Aji Perdana 👋, Welcome to my space!
-              </CardItem>
-              <CardItem translateZ="100" className="w-full mt-4">
-                <Image
-                  src="/images/avatar.jpg"
-                  height="1000"
-                  width="1000"
-                  className="h-96 w-96 object-cover rounded-xl group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                />
-              </CardItem>
-              <div className="flex justify-between items-center mt-10">
+          <div className=" w-fit">
+            <CardContainer className="inter-var">
+              <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-gray-950 border border-white/[0.2] w-fit h-auto rounded-xl p-6">
                 <CardItem
-                  translateZ={24}
-                  as={Link}
-                  href="https://www.linkedin.com/in/m-aji-perdana-3807071bb/"
-                  target="__blank"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                  translateZ="50"
+                  className="text-xl font-bold text-white"
                 >
-                  Hire Me →
+                  About Me
                 </CardItem>
                 <CardItem
-                  translateZ={20}
-                  as="button"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                  as="p"
+                  translateZ="60"
+                  className="text-gray-300 text-sm max-w-sm mt-2 "
                 >
-                  Download CV
+                  Hi, I{"'"}m M.Aji Perdana 👋, Welcome to my space!
                 </CardItem>
-              </div>
-            </CardBody>
-          </CardContainer>
-          <div className="px-14 mt-5 flex justify-between">
-            <LinkPreview url="https://github.com/ajiaja38">
-              <Button className="text-lg flex gap-3 w-32">
-                <FaGithubSquare /> Github
-              </Button>
-            </LinkPreview>
-            <LinkPreview url="https://www.linkedin.com/in/m-aji-perdana-3807071bb/">
-              <Button className="text-lg flex gap-3 w-32">
-                <FaLinkedin /> LinkedIn
-              </Button>
-            </LinkPreview>
-            <LinkPreview url="https://www.instagram.com/tromolsupraa/">
-              <Button className="text-lg flex gap-3 w-32">
-                <FaInstagramSquare /> Instagram
-              </Button>
-            </LinkPreview>
+                <CardItem translateZ="100" className="w-full mt-4">
+                  <Image
+                    src="/images/avatar.jpg"
+                    height="1000"
+                    width="1000"
+                    className="h-96 w-96 object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                  />
+                </CardItem>
+                <div className="flex justify-between items-center mt-10">
+                  <CardItem
+                    translateZ={24}
+                    as={Link}
+                    href="https://www.linkedin.com/in/m-aji-perdana-3807071bb/"
+                    target="__blank"
+                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                  >
+                    Hire Me →
+                  </CardItem>
+                  <CardItem
+                    translateZ={20}
+                    as="button"
+                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                  >
+                    Download CV
+                  </CardItem>
+                </div>
+              </CardBody>
+            </CardContainer>
+            <div className="w-full mt-5 flex justify-between">
+              <LinkPreview url="https://github.com/ajiaja38">
+                <Button className="text-lg flex gap-3 w-32">
+                  <FaGithubSquare /> Github
+                </Button>
+              </LinkPreview>
+              <LinkPreview url="https://www.linkedin.com/in/m-aji-perdana-3807071bb/">
+                <Button className="text-lg flex gap-3 w-32">
+                  <FaLinkedin /> LinkedIn
+                </Button>
+              </LinkPreview>
+              <LinkPreview url="https://www.instagram.com/tromolsupraa/">
+                <Button className="text-lg flex gap-3 w-32">
+                  <FaInstagramSquare /> Instagram
+                </Button>
+              </LinkPreview>
+            </div>
           </div>
         </motion.div>
         <motion.div
@@ -143,67 +145,69 @@ const AboutMe: React.FC = (): JSX.Element => {
             {codeToString}
           </SyntaxHighlighter>
         </motion.div>
-        <div className="w-full mt-7 lg:hidden">
-          <CardContainer className="inter-var">
-            <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-gray-950 border border-white/[0.2] w-full h-auto rounded-xl p-6">
-              <CardItem
-                translateZ="50"
-                className="text-xl font-bold text-white"
-              >
-                About Me
-              </CardItem>
-              <CardItem
-                as="p"
-                translateZ="60"
-                className="text-gray-300 text-sm max-w-sm mt-2 "
-              >
-                Hi, I{"'"}m M.Aji Perdana 👋, Welcome to my space!
-              </CardItem>
-              <CardItem translateZ="100" className="w-full mt-4">
-                <Image
-                  src="/images/avatar.jpg"
-                  height="1000"
-                  width="1000"
-                  className="h-96 w-96 object-cover rounded-xl group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                />
-              </CardItem>
-              <div className="flex justify-between items-center mt-10">
+        <div className="w-full mt-7 flex justify-center lg:hidden">
+          <div className=" w-fit">
+            <CardContainer className="inter-var">
+              <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-gray-950 border border-white/[0.2] w-fit h-auto rounded-xl p-6">
                 <CardItem
-                  translateZ={24}
-                  as={Link}
-                  href="https://www.linkedin.com/in/m-aji-perdana-3807071bb/"
-                  target="__blank"
-                  className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                  translateZ="50"
+                  className="text-xl font-bold text-white"
                 >
-                  Hire Me →
+                  About Me
                 </CardItem>
                 <CardItem
-                  translateZ={20}
-                  as="button"
-                  className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                  as="p"
+                  translateZ="60"
+                  className="text-gray-300 text-sm max-w-sm mt-2 "
                 >
-                  Download CV
+                  Hi, I{"'"}m M.Aji Perdana 👋, Welcome to my space!
                 </CardItem>
-              </div>
-            </CardBody>
-          </CardContainer>
-          <div className="mt-5 flex justify-between w-full">
-            <LinkPreview url="https://github.com/ajiaja38">
-              <Button className="text-4xl flex w-24">
-                <FaGithubSquare />
-              </Button>
-            </LinkPreview>
-            <LinkPreview url="https://www.linkedin.com/in/m-aji-perdana-3807071bb/">
-              <Button className="text-4xl flex w-24">
-                <FaLinkedin />
-              </Button>
-            </LinkPreview>
-            <LinkPreview url="https://www.instagram.com/tromolsupraa/">
-              <Button className="text-4xl flex w-24">
-                <FaInstagramSquare />
-              </Button>
-            </LinkPreview>
+                <CardItem translateZ="100" className="w-full mt-4">
+                  <Image
+                    src="/images/avatar.jpg"
+                    height="1000"
+                    width="1000"
+                    className="h-96 w-96 object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                  />
+                </CardItem>
+                <div className="flex justify-between items-center mt-10">
+                  <CardItem
+                    translateZ={24}
+                    as={Link}
+                    href="https://www.linkedin.com/in/m-aji-perdana-3807071bb/"
+                    target="__blank"
+                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                  >
+                    Hire Me →
+                  </CardItem>
+                  <CardItem
+                    translateZ={20}
+                    as="button"
+                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                  >
+                    Download CV
+                  </CardItem>
+                </div>
+              </CardBody>
+            </CardContainer>
+            <div className="w-full mt-5 flex justify-between">
+              <LinkPreview url="https://github.com/ajiaja38">
+                <Button className="text-lg flex gap-3 w-32">
+                  <FaGithubSquare /> Github
+                </Button>
+              </LinkPreview>
+              <LinkPreview url="https://www.linkedin.com/in/m-aji-perdana-3807071bb/">
+                <Button className="text-lg flex gap-3 w-32">
+                  <FaLinkedin /> LinkedIn
+                </Button>
+              </LinkPreview>
+              <LinkPreview url="https://www.instagram.com/tromolsupraa/">
+                <Button className="text-lg flex gap-3 w-32">
+                  <FaInstagramSquare /> Instagram
+                </Button>
+              </LinkPreview>
+            </div>
           </div>
         </div>
         <div className="w-full lg:hidden">
