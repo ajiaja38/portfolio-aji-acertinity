@@ -11,6 +11,7 @@ const Header: React.FC = (): JSX.Element => {
     "Backend Developer",
     "System Analyst",
     "Photographer",
+    "Man in Tech",
   ];
 
   return (
